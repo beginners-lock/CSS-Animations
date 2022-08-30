@@ -1,0 +1,89 @@
+body{
+	width:90vw; height:90vh;
+	display:flex; flex-direction:row;
+	align-items:center; justify-content:space-around;
+}
+
+#container{
+	position:relative;
+	width:100px; height:100px;
+	/*border:1px brown solid; border-radius:50%;*/
+	display:flex; flex-direction:row; flex-wrap:wrap;
+	justify-content:space-between; align-items:center;
+	animation:animate 3s linear infinite;
+}
+
+.circle{
+	position:absolute;
+	min-width:20px; max-width:20px;
+	min-height:20px; max-height:20px;
+	/*animation:expand 3s linear infinite;*/
+	transition-duration: 0.25s;
+}
+
+#red{
+	bottom:85px;
+	right:60px;
+}
+
+#green{
+	bottom:85px;
+	left:60px;	
+}
+
+#blue{
+	bottom:60px;
+	left:87px;
+}
+
+#purple{
+	bottom:60px;
+	right:87px;
+}
+
+#navy{
+	top:60px;
+	left:87px;
+}
+
+#orange{
+	top:60px;
+	right:87px;
+}
+
+#brown{
+	top:85px;
+	right:60px;
+}
+
+#cyan{
+	top:85px;
+	left:60px;
+}
+
+@keyframes animate{
+	0%{
+		transform: rotate(0deg);
+	}
+
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes expand{
+	0%{
+		min-width:20px; max-width:20px;
+		min-height:20px; max-height:20px;
+	}
+
+	50%{
+		min-width:40px; max-width:40px;
+		min-height:40px; max-height:40px;
+	}
+
+	100%{
+		min-width:20px; max-width:20px;
+		min-height:20px; max-height:20px;
+	}
+}
